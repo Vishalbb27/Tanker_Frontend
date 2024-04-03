@@ -1,0 +1,177 @@
+@use postcss-preset-env {
+  stage: 0;
+}
+
+/* config.css */
+
+:root {
+  --baseColor: #606468;
+}
+
+/* helpers/align.css */
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 20rem;
+}
+
+/* helpers/hidden.css */
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+:root {
+  --htmlFontSize: 100%;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
+:root {
+  --formGap: 0.875rem;
+}
+
+.login input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.login input[type="submit"] {
+  cursor: pointer;
+}
+
+.login {
+  display: grid;
+  gap: var(--formGap);
+}
+
+.form_field {
+  display: flex;
+}
+
+.form_input {
+  flex: 1;
+}
+
+/* modules/login.css */
+
+:root {
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #ea4c88;
+
+  --loginInputBackgroundColor: #ffffff;
+  --loginInputHoverBackgroundColor: #c0b9b94b;
+
+  --loginLabelBackgroundColor: #c0b9b94b;
+
+  --loginSubmitBackgroundColor: #ea4c88;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #d44179;
+}
+
+.login {
+  color: var(--loginColor);
+}
+
+.login label,
+.login input[type="email"],
+.login input[type="password"],
+.login input[type="text"],
+.login input[type="submit"],
+.login select,
+.login option {
+  border-radius: var(--loginBorderRadus);
+  padding: 1rem;
+}
+
+.login option:checked{
+  color: pink;
+}
+
+.login label {
+  background-color: var(--loginLabelBackgroundColor);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-inline: 1.25rem;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="email"],
+.login select,option {
+  background-color: var(--loginInputBackgroundColor);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+select, option{
+  width: 100%;
+  border: none;
+
+}
+
+
+.login input[type="password"]:focus,
+.login input[type="text"]:focus,
+.login input[type="password"]:hover,
+.login input[type="text"]:hover,
+.login input[type="email"]:focus,
+.login input[type="email"]:hover,
+.login select:hover,
+.login select:focus {
+  /* background-color: var(--loginInputHoverBackgroundColor); */
+  outline: 1px solid var(--loginSubmitBackgroundColor);
+}
+
+
+
+.login input[type="submit"] {
+  background-color: var(--loginSubmitBackgroundColor);
+  color: var(--loginSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.login input[type="submit"]:focus,
+.login input[type="submit"]:hover {
+  background-color: var(--loginSubmitHoverBackgroundColor);
+}
+
+
+/* modules/text.css */
+
+.login-form a {
+  margin-block: 1.5rem;
+  color: var(--loginColor);
+}
+
+.text--center {
+  text-align: center;
+}

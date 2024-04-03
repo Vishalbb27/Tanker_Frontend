@@ -1,0 +1,24 @@
+.global-container {
+  /* margin-left: 60px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.global-subcontianer{
+    display: flex;
+    flex-direction: row;
+}
+
+.global-info{
+    margin: 30px 30px;
+    width: 100%;
+}
+
+.global-header{
+    background-color: #2a363b;
+    /* display: flex; */
+    width: 100%;
+    justify-content: center;
+    color: #e84a5f;
+}
+

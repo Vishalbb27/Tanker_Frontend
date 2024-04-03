@@ -1,0 +1,24 @@
+.home-container {
+  /* margin-left: 60px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.home-subcontianer{
+    display: flex;
+    flex-direction: row;
+}
+
+.home-info{
+    margin: 30px 30px;
+    width: 100%;
+}
+
+.home-header{
+    background-color: #2a363b;
+    /* display: flex; */
+    width: 100%;
+    justify-content: center;
+    color: #e84a5f;
+}
+

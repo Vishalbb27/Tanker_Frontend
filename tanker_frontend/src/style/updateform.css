@@ -1,0 +1,109 @@
+.profile-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.profile-formfield {
+  margin-bottom: 1.5rem;
+}
+
+.profile-formfield label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.profile-formfield input[type="text"],
+.profile-formfield input[type="email"],
+.profile-formfield input[type="password"],
+.profile-formfield textarea {
+  width: 95%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.profile-formfield input[type="text"]:focus,
+.profile-formfield input[type="email"]:focus,
+.profile-formfield input[type="password"]:focus,
+.profile-formfield textarea:focus {
+  border-color: #007bff;
+}
+
+.profile-formfield textarea {
+  min-height: 100px;
+}
+
+.updateButton,
+.editButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.updateButton {
+  background-color: #007bff;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.profile-formfield input:disabled,
+.profile-formfield textarea:disabled {
+  background: rgba(248, 247, 247, 0.79);
+  
+}
+
+.editButton {
+  background-color: #ff0000;
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  width: 100px;
+}
+
+.updateButton:hover,
+.editButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.updateButton:active,
+.editButton:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.updateButton:focus,
+.editButton:focus {
+  outline: none;
+}
+
+/* Styling for form submit button */
+.btn-submit {
+  background-color: #28a745;
+}
+
+/* Styling for form reset button */
+.btn-reset {
+  background-color: #dc3545;
+}
+
+/* Hover effect on form submit and reset buttons */
+.updateButton:hover,
+.editButton:hover {
+  opacity: 0.9;
+}
