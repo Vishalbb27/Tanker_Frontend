@@ -18,7 +18,7 @@ const RegisterScreen = () => {
   const [user, setUser] = useState({
     name: "",
     email: "",
-    selectUserType: "",
+    AccountType: [],
     password: "",
     confirmPassword: "",
   });
@@ -33,12 +33,18 @@ const RegisterScreen = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     if (user.password != user.confirmPassword) {
-      console.log("error");
+      toast.error("Password does not match.");
       return;
     } else {
       try {
-        // const res = await register({ user }).unwrap();
-        dispatch(setCredentails({ ...user }));
+        console.log(user);
+        const res = await register({
+          email: user.email,
+          password: user.password,
+          AccountType: user.AccountType,
+        }).unwrap();
+        console.log(res);
+        dispatch(setCredentails(user));
         navigate("/");
       } catch (error) {
         console.log(error);
@@ -50,7 +56,7 @@ const RegisterScreen = () => {
     const { name, value } = e.target;
     setUser((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: name === "AccountType" ? value.split(",") : value,
     }));
   };
 
@@ -100,8 +106,8 @@ const RegisterScreen = () => {
             </label>
             <select
               className="select-options"
-              name="selectUserType"
-              value={user.selectUserType}
+              name="AccountType"
+              value={user.AccountType}
               onChange={(e) => changeHandler(e)}
             >
               <option value="">Select User Type</option>
@@ -128,12 +134,12 @@ const RegisterScreen = () => {
             />
           </div>
           <div className="form_field">
-            <label for="login_password">
+            <label for="login_confirmpassword">
               <RiLockPasswordFill color="ea4c88" />
               <span className="hidden">Password</span>
             </label>
             <input
-              id="login_password"
+              id="login_confirmpassword"
               type="password"
               value={user.confirmPassword}
               onChange={(e) => changeHandler(e)}
